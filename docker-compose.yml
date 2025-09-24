@@ -1,0 +1,11 @@
+services:
+  hello_world_app:
+    build: .
+    container_name: hello_world_app
+    ports:
+      - "4000:4000"
+    environment:
+      - MIX_ENV=prod
+      - SECRET_KEY_BASE=super_secret_key
+      - PORT=4000
+    restart: unless-stopped
